@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MovieTime</string>
+    <string name="snackbar_please_try_again">Oops! Please try again later!</string>
+    <string name="txt_please_wait">Please Wait&#8230;</string>
+    <string name="title_activity_movie_details">MovieDetailsActivity</string>
+    <string name="title_activity_chat">Movie Chat</string>
+    <string name="action_settings">Settings</string>
+    <string name="snackbar_auth_failed">Authentication failed</string>
+    <string name="snacbar_auth_complete">Welcome %s!</string>
+    <string name="btn_send">SEND</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.assignment.movietime.view.activities.ChatActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.assignment.movietime.viewmodel.ChatViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_16dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_chats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lnr_send_msg"
+            app:stackFromEnd="true" />
+
+        <LinearLayout
+            android:id="@+id/lnr_send_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/messageEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:inputType="textCapSentences"
+                android:addTextChangedListener="@{viewModel.textWatcher}"
+                android:text="@={viewModel.message}" />
+
+            <Button
+                android:id="@+id/sendButton"
+                style="@style/YellowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:enabled="@{viewModel.sendEnabled}"
+                android:onClick="@{viewModel::onSendClicked}"
+                android:text="@string/btn_send" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryLight">#C5CAE9</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorTransparentYellow">#B2FFC107</color>
+    <color name="colorRipple">#66FFFFFF</color>
+    <color name="colorTitleBackground">#66000000</color>
+    <color name="colorDisabledGrey">#ACACAC</color>
+    <color name="translucent_scrim_top">#26000000</color>
+    <color name="translucent_scrim_top_center">#0C000000</color>
+    <color name="translucent_scrim_bottom">#73000000</color>
+    <color name="translucent_scrim_bottom_center">#80000000</color>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movieViewModel"
+            type="com.assignment.movietime.viewmodel.MovieListItemViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:onClick="@{movieViewModel::onMovieClicked}"
+        app:cardCornerRadius="@dimen/_3dp"
+        app:elevation="@dimen/_3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200dp"
+                app:image="@{movieViewModel.imageUrl}" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_movie_poster"
+                android:background="@color/colorTitleBackground"
+                android:padding="@dimen/_10dp"
+                android:text="@{movieViewModel.title}"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:text="Harry Potter" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_title"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_rating"
+                    style="@style/TextView16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_star"
+                    android:text="@{movieViewModel.voteAverage}"
+                    tools:text="9.8" />
+
+                <TextView
+                    android:id="@+id/txt_release_date"
+                    style="@style/TextView16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:text="@{movieViewModel.releaseDate}"
+                    tools:text="18 Aug, 2017" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

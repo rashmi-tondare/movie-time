@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_200dp">200dp</dimen>
+    <dimen name="font_30sp">30sp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="font_16sp">16sp</dimen>
+    <dimen name="font_26sp">26sp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="_300dp">300dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="sheet_text_scrim_height_top">88dp</dimen>
+    <dimen name="sheet_text_scrim_height_bottom">88dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
+</resources>
